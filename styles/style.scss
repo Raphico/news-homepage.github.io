@@ -4,8 +4,10 @@ $soft-orange: hsl(35, 77%, 62%);
 $soft-red: hsl(5, 85%, 63%);
 $off-white: hsl(36, 100%, 99%);
 $grayish-blue: hsl(233, 8%, 79%);
-$dark-graying-blue: hsl(236, 13%, 42%);
+$dark-grayish-blue: hsl(236, 13%, 42%);
 $very-dark-blue: hsl(240, 100%, 5%);
+
+@import 'utilities';
 
 *
 {
@@ -20,4 +22,140 @@ body
   font-size: 15px;
   background-color: $off-white;
   color: $very-dark-blue;
+}
+
+.container
+{
+  width: 80%;
+  margin: auto;
+  max-width: 1100px;
+}
+
+.navbar 
+{
+  height: 150px;
+
+  li 
+  {
+    cursor: pointer;
+    margin-right: 40px;
+    color: $dark-grayish-blue;
+    transition: all 0.3s;
+    
+    &:hover 
+    {
+      color: $soft-red;
+    }
+  }
+}
+
+.main-container
+{
+  margin-bottom: 70px;
+
+  .web-3
+  {
+    img 
+    {
+      width: 95%;
+    }
+
+    .content
+    {
+      max-width: 683px;
+      margin-top: 20px;
+
+      h1 
+      {
+        font-weight: 800;
+        font-size: 3em;
+        line-height: 1em;
+      }
+
+      .content-p
+      {
+        p
+        {
+          color: $dark-grayish-blue;
+          margin-bottom: 30px;
+        }
+
+        button 
+        {
+          cursor: pointer;
+          padding: 10px 25px;
+          border: 0;
+          border-radius: 0;
+          font-size: 13px;
+          background-color: $soft-red;
+          color: $off-white;
+          font-weight: 700;
+          letter-spacing: 0.2em;
+          transition: 0.3s;
+
+          &:hover 
+          {
+            background-color: $very-dark-blue;
+          }
+
+          &:active
+          {
+            transform: scale(0.9);
+          }
+        }
+      }
+
+      &.grid
+      {
+        grid-template-columns: 2fr 3fr;
+        gap: 50px;
+      }
+    }
+  }
+
+  .sidebar
+  {
+    background-color: $very-dark-blue;
+    color: $off-white;
+    padding: 30px 20px;
+
+    h1 
+    {
+      color: $soft-orange;
+      margin-bottom: 30px;
+    }
+
+    h3 
+    {
+      cursor: pointer;
+      margin-bottom: 15px;
+      transition: all 0.3s;
+
+      &:hover 
+      {
+        color: $soft-orange;
+      }
+    }
+
+    .bar
+    {
+      width: 100%;
+      background-color: $dark-grayish-blue;
+      height: 1px;
+      margin: 30px 0;
+    }
+
+    p 
+    {
+      color: $grayish-blue;
+    }
+  }
+}
+
+footer
+{
+  &.grid
+  {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
