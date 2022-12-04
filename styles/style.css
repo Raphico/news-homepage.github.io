@@ -38,6 +38,8 @@ body {
   font-size: 15px;
   background-color: #fffdfa;
   color: #00001a;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 .container {
@@ -50,16 +52,65 @@ body {
   height: 150px;
 }
 
-.navbar li {
+.navbar a {
   cursor: pointer;
   margin-right: 40px;
   color: #5d5f79;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+  text-decoration: none;
 }
 
-.navbar li:hover {
+.navbar a:hover {
   color: #f15e50;
+}
+
+.navbar .hamburger {
+  display: none;
+}
+
+.navbar #sm {
+  position: absolute;
+  left: 40%;
+  background-color: #fffdfa;
+  width: 70vw;
+  height: 300vh;
+  margin-top: 500px;
+  -webkit-transform: translateX(1000px);
+          transform: translateX(1000px);
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.navbar #sm.flex {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.navbar #sm .close-icon {
+  margin-left: 70%;
+  margin-bottom: 100px;
+}
+
+.navbar #sm li {
+  font-size: 25px;
+  margin: 30px;
+}
+
+.navbar #sm li:hover {
+  color: #f15e50;
+}
+
+.navbar #sm li a {
+  color: #00001a;
 }
 
 .main-container {
@@ -148,8 +199,68 @@ body {
   color: #c5c6ce;
 }
 
+footer {
+  margin-bottom: 50px;
+}
+
 footer.grid {
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+footer .flex {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  gap: 20px;
+}
+
+footer img {
+  width: 30%;
+}
+
+footer h1 {
+  color: #c5c6ce;
+  font-size: 30px;
+}
+
+footer h4 {
+  font-weight: 800;
+  margin: 10px 0;
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .navbar .lg {
+    display: none;
+  }
+  .navbar .hamburger {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+  }
+  footer.grid {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+  footer img {
+    width: 20%;
+  }
+  footer .flex {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+  .main-container.grid {
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+  }
+  .web-3 {
+    margin-bottom: 50px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
