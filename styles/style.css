@@ -279,7 +279,7 @@ footer h4 {
     gap: 50px;
   }
   .main-container .web-3 img {
-    content: url(/assets/images/image-web-3-mobile.jpg);
+    content: url(./assets/images/image-web-3-mobile.jpg);
   }
   .main-container .web-3 .content.grid {
     -ms-grid-columns: 1fr;
